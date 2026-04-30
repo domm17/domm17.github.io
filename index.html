@@ -1,41 +1,303 @@
-<section>
-  <h2>💼 Experiencia</h2>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Domènech | Software Engineer & Content Creator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(90deg, #3b82f6, #10b981); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .app-card:hover { transform: translateY(-5px); transition: all 0.3s ease; }
+        [data-i18n] { transition: opacity 0.2s ease; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200">
 
-  <div class="grid">
+    <!-- Header / Navigation -->
+    <nav class="fixed w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <span class="text-xl font-bold tracking-tighter text-white">DOM<span class="text-blue-500">CODING</span></span>
+            <div class="flex items-center gap-6">
+                <div class="hidden md:flex gap-8 text-sm font-medium uppercase tracking-widest">
+                    <a href="#inicio" data-i18n="nav-home" class="hover:text-blue-400 transition">Inicio</a>
+                    <a href="#apps" data-i18n="nav-apps" class="hover:text-blue-400 transition">Apps</a>
+                    <a href="#youtube" data-i18n="nav-youtube" class="hover:text-blue-400 transition">YouTube</a>
+                </div>
+                <!-- Language Switcher -->
+                <div class="flex bg-slate-900 rounded-full p-1 border border-slate-700">
+                    <button onclick="setLanguage('es')" id="btn-es" class="px-3 py-1 rounded-full text-xs font-bold transition-all bg-blue-600 text-white">ES</button>
+                    <button onclick="setLanguage('en')" id="btn-en" class="px-3 py-1 rounded-full text-xs font-bold transition-all text-slate-400 hover:text-white">EN</button>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-    <div class="card">
-      <h3>iOS Engineer</h3>
-      <p><strong>VIEWNEXT</strong></p>
-      <p>Mar 2022 – Actualidad · Barcelona</p>
-      <span class="tag">Swift</span>
-      <span class="tag">SwiftUI</span>
-      <span class="tag">iOS</span>
-    </div>
+    <!-- Hero Section -->
+    <section id="inicio" class="pt-32 pb-20 px-6">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+            <div class="flex-1 text-center md:text-left">
+                <h2 class="text-blue-500 font-bold mb-4 uppercase tracking-[0.2em]" data-i18n="hero-role">Software Engineer</h2>
+                <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6">David <span class="gradient-text">Domènech</span></h1>
+                <p class="text-xl text-slate-400 mb-8 leading-relaxed max-w-2xl" data-i18n="hero-desc">
+                    Especialista en desarrollo móvil (iOS & Android). Creador de productos con más de 50.000 descargas y divulgador tecnológico apasionado por Swift y la arquitectura de software.
+                </p>
+                <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                    <a href="https://www.linkedin.com/in/david-dom%C3%A8nech-vil%C3%A0-42486011b/" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-bold transition flex items-center gap-2">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="#apps" class="bg-slate-800 hover:bg-slate-700 text-white px-8 py-3 rounded-full font-bold transition" data-i18n="hero-btn-apps">Ver Proyectos</a>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-tr from-blue-500 to-emerald-500 p-1">
+                    <div class="w-full h-full rounded-full bg-slate-950 flex items-center justify-center overflow-hidden">
+                        <i class="fas fa-user-code text-7xl text-slate-700"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="card">
-      <h3>Mobile Software Engineer</h3>
-      <p><strong>Freelance</strong></p>
-      <p>Ene 2024 – Actualidad · Remoto</p>
-      <span class="tag">Flutter</span>
-      <span class="tag">iOS</span>
-      <span class="tag">Android</span>
-    </div>
+    <!-- Stats Section -->
+    <section class="py-12 bg-slate-900/50 border-y border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+                <p class="text-4xl font-extrabold text-white">+50K</p>
+                <p class="text-slate-500 uppercase text-xs tracking-widest mt-2" data-i18n="stat-downloads">Descargas Android</p>
+            </div>
+            <div>
+                <p class="text-4xl font-extrabold text-white">6h+</p>
+                <p class="text-slate-500 uppercase text-xs tracking-widest mt-2" data-i18n="stat-course">Curso Swift iOS</p>
+            </div>
+            <div>
+                <p class="text-4xl font-extrabold text-white">Valls</p>
+                <p class="text-slate-500 uppercase text-xs tracking-widest mt-2" data-i18n="stat-origin">Nacido en España</p>
+            </div>
+            <div>
+                <p class="text-4xl font-extrabold text-white">1996</p>
+                <p class="text-slate-500 uppercase text-xs tracking-widest mt-2" data-i18n="stat-year">Año de Nacimiento</p>
+            </div>
+        </div>
+    </section>
 
-    <div class="card">
-      <h3>Mobile Software Engineer</h3>
-      <p><strong>Studiogenesis</strong></p>
-      <p>Ago 2020 – Mar 2022 · Reus</p>
-      <span class="tag">Flutter</span>
-      <span class="tag">Mobile</span>
-    </div>
+    <!-- Apps Section -->
+    <section id="apps" class="py-24 px-6 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold mb-12 flex items-center gap-4">
+            <span class="bg-blue-500 w-8 h-1 rounded-full"></span> <span data-i18n="apps-title">Aplicaciones Destacadas</span>
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- App 1 -->
+            <div class="app-card bg-slate-900 p-6 rounded-3xl border border-slate-800 flex flex-col">
+                <div class="w-12 h-12 bg-emerald-500/10 rounded-xl flex items-center justify-center mb-4">
+                    <i class="fab fa-android text-emerald-500 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">GeoGuess</h3>
+                <p class="text-slate-400 text-sm mb-6" data-i18n="app-geo-desc">Juego de geografía con éxito masivo en la Play Store.</p>
+                <div class="flex justify-between items-center mt-auto">
+                    <span class="text-xs font-mono text-emerald-400 font-bold">+50K DLs</span>
+                    <a href="https://play.google.com/store/apps/details?id=com.domstudio.geoguess" target="_blank" class="text-white hover:text-blue-400"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
 
-    <div class="card">
-      <h3>Software Engineer</h3>
-      <p><strong>BASF</strong></p>
-      <p>Jul 2019 – Jul 2020 · Tarragona</p>
-      <span class="tag">Software</span>
-      <span class="tag">Engineering</span>
-    </div>
+            <!-- App 2 -->
+            <div class="app-card bg-slate-900 p-6 rounded-3xl border border-slate-800 flex flex-col">
+                <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center mb-4">
+                    <i class="fab fa-apple text-blue-400 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">WikiJumper</h3>
+                <p class="text-slate-400 text-sm mb-6" data-i18n="app-wiki-desc">El famoso desafío de Wikipedia llevado al móvil.</p>
+                <div class="flex justify-between items-center mt-auto">
+                    <span class="text-xs font-mono text-blue-400 font-bold">iOS App</span>
+                    <a href="https://apps.apple.com/us/app/wikijumper/id6739426126" target="_blank" class="text-white hover:text-blue-400"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
 
-  </div>
-</section>
+            <!-- App 3 -->
+            <div class="app-card bg-slate-900 p-6 rounded-3xl border border-slate-800 flex flex-col">
+                <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center mb-4">
+                    <i class="fab fa-apple text-blue-400 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">Locate Royale</h3>
+                <p class="text-slate-400 text-sm mb-6" data-i18n="app-locate-desc">Competencia de localización en tiempo real.</p>
+                <div class="flex justify-between items-center mt-auto">
+                    <span class="text-xs font-mono text-blue-400 font-bold">iOS App</span>
+                    <a href="https://apps.apple.com/us/app/locate-royale/id6754823564" target="_blank" class="text-white hover:text-blue-400"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+
+            <!-- App 4 -->
+            <div class="app-card bg-slate-900 p-6 rounded-3xl border border-slate-800 flex flex-col">
+                <div class="w-12 h-12 bg-emerald-500/10 rounded-xl flex items-center justify-center mb-4">
+                    <i class="fab fa-android text-emerald-500 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">ScrollMath</h3>
+                <p class="text-slate-400 text-sm mb-6" data-i18n="app-math-desc">Entrenamiento matemático dinámico y divertido.</p>
+                <div class="flex justify-between items-center mt-auto">
+                    <span class="text-xs font-mono text-emerald-400 font-bold">Android App</span>
+                    <a href="https://play.google.com/store/apps/details?id=com.domify.scrollmath" target="_blank" class="text-white hover:text-blue-400"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- YouTube Content Section -->
+    <section id="youtube" class="py-24 bg-slate-900/30 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 flex items-center gap-4">
+                <span class="bg-red-500 w-8 h-1 rounded-full"></span> <span data-i18n="yt-title">Formación & Divulgación</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Canal 1 -->
+                <div class="bg-slate-900 rounded-3xl overflow-hidden border border-slate-800 hover:border-red-500 transition shadow-xl">
+                    <div class="p-8">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center text-white text-3xl">
+                                <i class="fab fa-youtube"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-white">Dom Coding</h3>
+                                <p class="text-slate-500" data-i18n="yt-cat-1">Tutoriales de Programación</p>
+                            </div>
+                        </div>
+                        <p class="text-slate-400 mb-6" data-i18n="yt-desc-1">Mi canal principal donde comparto conocimientos generales de desarrollo, mejores prácticas y mi día a día como ingeniero.</p>
+                        <a href="https://www.youtube.com/@Dom_Coding" target="_blank" class="inline-block border border-red-600 text-red-500 hover:bg-red-600 hover:text-white px-6 py-2 rounded-full font-bold transition" data-i18n="yt-btn">Visitar Canal</a>
+                    </div>
+                </div>
+
+                <!-- Canal 2 -->
+                <div class="bg-slate-900 rounded-3xl overflow-hidden border border-slate-800 hover:border-blue-500 transition shadow-xl">
+                    <div class="p-8">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-3xl">
+                                <i class="fab fa-swift"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-white">iOS Republic</h3>
+                                <p class="text-slate-500" data-i18n="yt-cat-2">Especialista en Swift & Apple</p>
+                            </div>
+                        </div>
+                        <p class="text-slate-400 mb-6 font-semibold text-blue-400" data-i18n="yt-course-highlight">¡Incluye un curso magistral de +6 horas sobre Swift para principiantes!</p>
+                        <p class="text-slate-400 mb-6 text-sm" data-i18n="yt-desc-2">Contenido avanzado para desarrolladores que buscan dominar el ecosistema de Apple.</p>
+                        <a href="https://www.youtube.com/@IOSRepublicByDom" target="_blank" class="inline-block border border-blue-600 text-blue-500 hover:bg-blue-600 hover:text-white px-6 py-2 rounded-full font-bold transition" data-i18n="yt-btn-course">Ver Curso Swift</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Section -->
+    <section class="py-24 px-6 text-center">
+        <div class="max-w-4xl mx-auto bg-gradient-to-br from-slate-900 to-slate-950 p-12 rounded-3xl border border-slate-800 shadow-2xl">
+            <h2 class="text-3xl font-bold text-white mb-6" data-i18n="social-title">Conecta conmigo en redes</h2>
+            <p class="text-slate-400 mb-10" data-i18n="social-desc">Sígueme para ver contenido corto sobre programación, tips rápidos y lanzamientos.</p>
+            <div class="flex justify-center gap-8 text-3xl">
+                <a href="https://www.instagram.com/dom_coding/" target="_blank" class="text-slate-500 hover:text-pink-500 transition"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@dom_coding" target="_blank" class="text-slate-500 hover:text-white transition"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.linkedin.com/in/david-dom%C3%A8nech-vil%C3%A0-42486011b/" target="_blank" class="text-slate-500 hover:text-blue-500 transition"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto" class="py-12 border-t border-slate-900 text-center">
+        <p class="text-slate-600 text-sm">
+            &copy; 2025 David Domènech Vilà • <span data-i18n="footer-loc">Valls, España</span>. <br>
+            <span data-i18n="footer-made">Construido con pasión por el software.</span>
+        </p>
+    </footer>
+
+    <script>
+        const translations = {
+            es: {
+                "nav-home": "Inicio",
+                "nav-apps": "Apps",
+                "nav-youtube": "YouTube",
+                "hero-role": "Ingeniero de Software",
+                "hero-desc": "Especialista en desarrollo móvil (iOS & Android). Creador de productos con más de 50.000 descargas y divulgador tecnológico apasionado por Swift y la arquitectura de software.",
+                "hero-btn-apps": "Ver Proyectos",
+                "stat-downloads": "Descargas Android",
+                "stat-course": "Curso Swift iOS",
+                "stat-origin": "Nacido en España",
+                "stat-year": "Año de Nacimiento",
+                "apps-title": "Aplicaciones Destacadas",
+                "app-geo-desc": "Juego de geografía con éxito masivo en la Play Store.",
+                "app-wiki-desc": "El famoso desafío de Wikipedia llevado al móvil.",
+                "app-locate-desc": "Competencia de localización en tiempo real.",
+                "app-math-desc": "Entrenamiento matemático dinámico y divertido.",
+                "yt-title": "Formación & Divulgación",
+                "yt-cat-1": "Tutoriales de Programación",
+                "yt-desc-1": "Mi canal principal donde comparto conocimientos generales de desarrollo, mejores prácticas y mi día a día como ingeniero.",
+                "yt-btn": "Visitar Canal",
+                "yt-cat-2": "Especialista en Swift & Apple",
+                "yt-course-highlight": "¡Incluye un curso magistral de +6 horas sobre Swift para principiantes!",
+                "yt-desc-2": "Contenido avanzado para desarrolladores que buscan dominar el ecosistema de Apple.",
+                "yt-btn-course": "Ver Curso Swift",
+                "social-title": "Conecta conmigo en redes",
+                "social-desc": "Sígueme para ver contenido corto sobre programación, tips rápidos y lanzamientos.",
+                "footer-loc": "Valls, España",
+                "footer-made": "Construido con pasión por el software."
+            },
+            en: {
+                "nav-home": "Home",
+                "nav-apps": "Apps",
+                "nav-youtube": "YouTube",
+                "hero-role": "Software Engineer",
+                "hero-desc": "Mobile development specialist (iOS & Android). Product creator with over 50,000 downloads and tech educator passionate about Swift and software architecture.",
+                "hero-btn-apps": "View Projects",
+                "stat-downloads": "Android Downloads",
+                "stat-course": "Swift iOS Course",
+                "stat-origin": "Born in Spain",
+                "stat-year": "Birth Year",
+                "apps-title": "Featured Applications",
+                "app-geo-desc": "Geography game with massive success on the Play Store.",
+                "app-wiki-desc": "The famous Wikipedia challenge brought to mobile.",
+                "app-locate-desc": "Real-time location competition.",
+                "app-math-desc": "Dynamic and fun mathematical training.",
+                "yt-title": "Education & Outreach",
+                "yt-cat-1": "Programming Tutorials",
+                "yt-desc-1": "My main channel where I share general development knowledge, best practices, and my daily life as an engineer.",
+                "yt-btn": "Visit Channel",
+                "yt-cat-2": "Swift & Apple Specialist",
+                "yt-course-highlight": "Includes a 6+ hour masterclass on Swift for beginners!",
+                "yt-desc-2": "Advanced content for developers looking to master the Apple ecosystem.",
+                "yt-btn-course": "View Swift Course",
+                "social-title": "Connect with me",
+                "social-desc": "Follow me for short programming content, quick tips, and new releases.",
+                "footer-loc": "Valls, Spain",
+                "footer-made": "Built with passion for software."
+            }
+        };
+
+        function setLanguage(lang) {
+            // Update texts
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    element.innerText = translations[lang][key];
+                }
+            });
+
+            // Update buttons style
+            const btnEs = document.getElementById('btn-es');
+            const btnEn = document.getElementById('btn-en');
+
+            if (lang === 'es') {
+                btnEs.classList.add('bg-blue-600', 'text-white');
+                btnEs.classList.remove('text-slate-400');
+                btnEn.classList.remove('bg-blue-600', 'text-white');
+                btnEn.classList.add('text-slate-400');
+            } else {
+                btnEn.classList.add('bg-blue-600', 'text-white');
+                btnEn.classList.remove('text-slate-400');
+                btnEs.classList.remove('bg-blue-600', 'text-white');
+                btnEs.classList.add('text-slate-400');
+            }
+        }
+    </script>
+</body>
+</html>
